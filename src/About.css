@@ -1,0 +1,300 @@
+/* About Section */
+#about {
+  background: linear-gradient(45deg,rgb(7, 7, 75),rgb(51, 172, 212),rgb(7,7,75));
+  padding: 60px 20px;
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  color: rgb(7, 7, 75);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+}
+
+/* Headings */
+#about h2 {
+  font-size: 2.2rem;
+  color: rgb(7, 7, 75);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Timeline Section */
+/* Timeline Container */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0;
+  max-width: 800px;
+}
+
+/* Timeline Line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px; /* Shift the line to the left for mobile */
+  width: 2px;
+  height: 100%;
+  background: rgb(7, 7, 75);
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns items to the left by default */
+  padding-left: 40px; /* Adds space to the left of the content */
+}
+
+/* Timeline Dot */
+.timeline-dot {
+  position: absolute;
+  top: 0;
+  left: 12px; /* Keep the dot aligned with the timeline line */
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, rgb(7, 7, 75), rgb(51, 172, 212), rgb(7, 7, 75));
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Timeline Content */
+.timeline-content {
+  background: linear-gradient(45deg, rgb(7, 7, 75), rgb(51, 172, 212), rgb(7, 7, 75));
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%; /* Take full width for mobile */
+  color: #fff;
+  box-shadow: 0 0 15px rgb(7, 7, 75);
+  z-index: 2;
+}
+
+/* Skills Section */
+.skill-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.skill-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+
+/* Individual Colors for Each Icon */
+.skill-icon.html5 {
+  background-color: #E34F26; /* HTML5 Color */
+}
+
+.skill-icon.css3 {
+  background-color: #1572B6; /* CSS3 Color */
+}
+
+.skill-icon.js {
+  background-color: #F7DF1E; /* JavaScript Color */
+  color: black; /* JS Icon color needs black text for better contrast */
+}
+
+.skill-icon.angular {
+  background-color: #DD0031; /* Angular Color */
+}
+
+.skill-icon.react {
+  background-color: #61DAFB; /* React Color */
+  color: black; /* React icon needs black text for contrast */
+}
+
+.skill-icon:hover {
+  transform: scale(1.1);
+}
+
+.skill-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-icon:hover .skill-percentage {
+  opacity: 1;
+}
+
+.skill-icon:hover .icon {
+  opacity: 0.3;
+}
+
+/* Certifications Section */
+.certifications {
+  margin-top: 40px;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.certificate-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificate-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-img {
+  width: 100%;
+  height: 300px; /* Fixed height for all certificate images */
+  object-fit: contain; /* Ensure the entire image is visible */
+  background-color: #f0f0f0; /* Light background to fill empty space */
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.certificate-item:hover .certificate-img {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-info {
+  margin-top: 15px;
+}
+
+.certificate-info h4 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  color: rgb(7, 7, 75);
+}
+
+.certificate-info p {
+  margin: 0;
+  font-size: 1rem;
+  color: rgb(100, 100, 100);
+}
+
+/* Ensure grid is responsive */
+@media (max-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .certificate-img {
+    height: 200px; /* Smaller fixed height on very small screens */
+  }
+}
+
+@media (min-width: 600px) {
+  .skill-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 1.8rem; /* Slightly larger font size */
+  }
+
+  .skill-percentage {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .skill-icon {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem; /* Return to default font size */
+  }
+
+  .skill-percentage {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skill-icon {
+    width: 120px;
+    height: 120px;
+    font-size: 2.2rem; /* Further increase for larger screens */
+  }
+
+  .skill-percentage {
+    font-size: 1.7rem;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .timeline-item {
+    flex-direction: row;
+    align-items: center;
+    padding-left: 0; /* Remove padding for side-by-side layout */
+  }
+
+  /* Timeline Line moves back to center */
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Odd Items - On the left side */
+  .timeline-item:nth-child(odd) {
+    flex-direction: row-reverse; /* Flip order for left side */
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content {
+    margin-right: auto;
+    text-align: right;
+    width: 45%;
+  }
+
+  /* Even Items - On the right side */
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto;
+    text-align: left;
+    width: 45%;
+  }
+
+  /* Adjust timeline-dot for larger screens */
+  .timeline-dot {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-content {
+    width: 45%; /* Reduce width for desktop view */
+  }
+}

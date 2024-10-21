@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+header {
+    display: flex;                     
+    justify-content: space-between;   
+    align-items: center;              
+    padding: 10px 10px;               /* Adjust padding for mobile */
+    background-color: rgb(7, 7, 75); 
+    background: linear-gradient(45deg,rgb(7, 7, 75),rgb(51, 172, 212),rgb(7,7,75));          
+    color: white;                     
+    position: fixed;
+    top: 0;                 
+    left: 0; 
+    width: 100%;                      
+    z-index: 1000;                   
+  }
+  
+  .container-fluid {
+    display: flex;                    
+    align-items: center; 
+    justify-content: space-between;            
+    width: 100%;                     
+  }
+  
+  .logoname {
+    font-family:Great Vibes,cursive;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0 0 5px black;              /* Smaller font size for mobile */
+  }
+  
+  button {
+    background: none;                
+    border: none;                    
+    color: white;                   
+    font-size: 1.5rem;               
+    cursor: pointer;                 
+  }
+  
+  nav {
+    display: none;                   /* Hide navigation by default for mobile */
+  }
+  
+  nav.active {
+    display: flex;                   /* Show navigation when active */
+    flex-direction: column;          /* Stack items vertically */
+    position: absolute;              /* Absolute positioning for dropdown */
+    top: 52px;                       /* Adjust position below header */
+    left: 0px;
+    width: 100%;                     /* Align with the right side */
+    background-color: #333;
+    background: linear-gradient(60deg,rgb(7, 7, 75),rgb(51, 172, 212),rgb(7,7,75));
+    text-align: center;          /* Same background for dropdown */
+  }
+  
+  nav ul {
+    list-style-type: none;           
+    padding: 0;                      
+    margin: 0;                       
+  }
+  
+  nav ul li {
+    padding: 10px 15px;              /* Add padding for touch targets */
+    cursor: pointer;                 
+    transition: background-color 0.3s;     
+  }
+  
+  nav ul li:hover {
+   color: rgb(7, 7, 75);                /* Background on hover */
+  }
+  
+  /* Tablet Styles */
+  @media (min-width: 768px) {
+    header {
+      padding: 15px 30px;            /* More padding for larger screens */
+    }
+  
+    h1 {
+      font-size: 1.5rem;              /* Larger font size */
+    }
+  
+    .barsBtn{
+      display: none;                  /* Hide hamburger button on tablet */
+    }
+  
+    nav {
+      display: flex;                  /* Show nav on larger screens */
+    }
+  
+    nav ul {
+      display: flex;                  /* Flex layout for list items */
+    }
+  
+    nav ul li {
+      margin: 0 20px;                /* Space out items */
+      padding: 0;                    /* Remove padding */
+    }
+  }
+  
+  /* Desktop Styles */
+  @media (min-width: 1024px) {
+    header {
+      padding: 20px 40px;            /* Increased padding for desktop */
+    }
+  
+    h1 {
+      font-size: 2rem;                /* Even larger font size */
+    }
+  }

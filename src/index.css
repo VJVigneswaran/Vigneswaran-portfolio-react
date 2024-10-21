@@ -1,13 +1,51 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* index.css or App.css */
+
+/* Reset some default browser styles */
+* {
+  margin: 0;                /* Remove default margin */
+  padding: 0;               /* Remove default padding */
+  box-sizing: border-box;   /* Include padding and border in element's total width and height */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Set global font styles */
+body {
+  font-family: 'Poppins', sans-serif;           /* Use a clean, sans-serif font */
+  line-height: 1.6;       /* Improve readability */
+  background-color: #f4f4f4; /* Light background color */
+  color: rgb(7, 7, 75);            /* Dark text color for contrast */
+}
+
+/* Center content in the App component */
+.App {
+  text-align: center;      /* Center text for main content */
+  padding: 60px 20px;     /* Add padding to avoid overlap with fixed header */
+}
+
+/* Link styles */
+a {
+  text-decoration: none;    /* Remove underline from links */
+  color: #007bff;          /* Default link color */
+  transition: color 0.3s;  /* Smooth color transition */
+}
+
+a:hover {
+  color: #0056b3;          /* Darker color on hover */
+}
+
+/* Section styles */
+section {
+  padding: 50px 20px;     /* Padding for sections */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  section {
+    padding: 70px 40px;   /* More padding on larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding: 100px 60px;  /* Even more padding for desktop */
+  }
 }

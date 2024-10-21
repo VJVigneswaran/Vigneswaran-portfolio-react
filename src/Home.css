@@ -1,0 +1,50 @@
+#home {
+    background-color: #f0f0f0;        /* Light background for contrast */
+    padding: 80px 20px;               /* Padding for the section */
+    text-align: center;               /* Center text alignment */
+  }
+  
+  #home p {
+    font-size: 1.3rem;                /* Adjust font size for the intro */
+    margin-bottom: 20px;              /* Space below the intro */
+  }
+  
+  #home h2 {
+    font-size: 2.5rem;                /* Large font size for your name */
+    margin: 20px 0;                   /* Space above and below the name */
+    color: rgb(7, 7, 75);                   /* Link color for your name */
+  }
+  
+  #home a {
+    display: inline-block;             /* Make the link behave like a button */
+    background-color: rgb(7, 7, 75);        /* Button background color */
+    color: white;                     /* Text color for the button */
+    padding: 10px 20px;               /* Padding for the button */
+    border-radius: 5px;               /* Rounded corners */
+    margin-top: 20px;                 /* Space above the button */
+    text-decoration: none;             /* Remove underline */
+    transition: background-color 0.3s;      /* Smooth background transition */
+  }
+  
+  #home a:hover {
+    background-color: #0056b3;        /* Darker background on hover */
+  }
+  
+  #home div {
+    max-width: 800px;                 /* Max width for content */
+    margin: 0 auto;                   /* Center align the content */
+  }
+  
+  @keyframes sparkle {
+    0%, 100% {
+      transform: rotate(335deg)
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .sparkle-effect {
+    animation: sparkle 1s infinite;
+  }
+  
